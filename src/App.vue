@@ -39,7 +39,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #fff;
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
 * {
@@ -54,26 +54,27 @@ export default {
   padding-top: 150px;
 }
 
-.flex-item-left {
-  background-color: transparent;
-  padding: 10px;
-  flex: 30%;
-}
 
 .flex-item-left1 {
   background-color: transparent;
-  flex: 20%;
+  flex: 30%;
+}
+
+.flex-item-left {
+  background-color: transparent;
+  padding: 10px;
+  flex: 10%;
 }
 
 .flex-item-right {
   background-color: transparent;
   padding: 10px;
-  flex: 30%;
+  flex: 10%;
 }
 
 .flex-item-right1 {
   background-color: transparent;
-  flex: 20%;
+  flex: 30%;
 }
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */
