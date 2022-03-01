@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="/whiteLogo.png" />
-
+    <p class="heading">Choose your marketplace</p>
     <div>
       <b-container class="bv-example-row">
         <b-row>
@@ -51,6 +51,11 @@ export default {
   color: #fff;
   padding-top: 30px;
   font-size: 30px;
+}
+
+.heading {
+  padding-top: 10px;
+  font-size: 50px;
 }
 
 .bv-example-row {
