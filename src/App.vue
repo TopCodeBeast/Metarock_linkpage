@@ -1,36 +1,26 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="/whiteLogo.png" />
-    <p class="heading">Choose your marketplace</p>
-    <div>
-      <b-container class="bv-example-row">
-        <b-row>
-          <b-col sm
-            ><a href="https://substrate.metarock.app">
-              <div>
-                <img alt="Vue logo" src="/polkadot.png" class="name" />
-              </div>
-              <div>Substrate</div>
-            </a></b-col
-          >
-          <b-col sm
-            ><a href="http://evm.metarock.network:3000">
-              <div>
-                <img alt="Vue logo" src="/metamask.png" class="name" />
-              </div>
-              <div>EVM</div>
-            </a></b-col
-          >
-          <b-col sm
-            ><a href="http://metarock.network:8080">
-              <div>
-                <img alt="Vue logo" src="/uniswap.png" class="name" />
-              </div>
-              <div>Swap</div>
-            </a></b-col
-          >
-        </b-row>
-      </b-container>
+
+    <div class="flex-container">
+      <div class="flex-item-left1"></div>
+      <div class="flex-item-left">
+        <a href="https://substrate.metarock.app">
+          <div>
+            <img alt="Vue logo" src="/polkadot.png" class="name" />
+          </div>
+          <div>Substrate</div>
+        </a>
+      </div>
+      <div class="flex-item-right">
+        <a href="http://evm.metarock.network:3000">
+          <div>
+            <img alt="Vue logo" src="/metamask.png" class="name" />
+          </div>
+          <div>EVM</div>
+        </a>
+      </div>
+      <div class="flex-item-right1"></div>
     </div>
   </div>
 </template>
@@ -50,27 +40,59 @@ export default {
   text-align: center;
   color: #fff;
   padding-top: 30px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
   font-size: 30px;
-}
-
-.heading {
-  padding-top: 10px;
-  font-size: 50px;
-}
-
-.bv-example-row {
+  text-align: center;
   padding-top: 150px;
+}
+
+
+.flex-item-left1 {
+  background-color: transparent;
+  flex: 30%;
+}
+
+.flex-item-left {
+  background-color: transparent;
+  padding: 10px;
+  flex: 10%;
+}
+
+.flex-item-right {
+  background-color: transparent;
+  padding: 10px;
+  flex: 10%;
+}
+
+.flex-item-right1 {
+  background-color: transparent;
+  flex: 30%;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+    padding-top: 40px;
+  }
+  .flex-item-left1 {
+    flex: 0%;
+  }
+  .flex-item-right1 {
+    flex: 0%;
+  }
 }
 
 a {
   text-decoration: none !important;
   color: white !important;
-}
-
-/* Responsive layout - makes a one column-layout instead of two-column layout */
-@media (max-width: 800px) {
-  .bv-example-row {
-    padding-top: 40px;
-  }
 }
 </style>
