@@ -6,7 +6,7 @@
         ><img alt="Vue logo" src="/whiteLogo.png" width="90" height="70"
       /></b-nav-item>
     </b-nav>
-    <b-container class="main-div">
+    <b-container class="main-item">
       <b-row class="text-center items" align-v="center">
         <b-col></b-col>
         <b-col
@@ -58,12 +58,12 @@ export default {
   font-size: 30px;
 }
 
-.main-div{
-  height: 90vh !important;
-}
-
 .name {
   padding-top: 10px;
+}
+
+.main-item{
+  height: 90vh !important;
 }
 
 .items {
