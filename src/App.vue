@@ -1,27 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="/whiteLogo.png" />
-
-    <div class="flex-container">
-      <div class="flex-item-left1"></div>
-      <div class="flex-item-left">
-        <a href="https://substrate.metarock.app">
-          <div>
-            <img alt="Vue logo" src="/polkadot.png" class="name" />
-          </div>
-          <div>Substrate</div>
-        </a>
-      </div>
-      <div class="flex-item-right">
-        <a href="http://evm.metarock.network:3000">
-          <div>
-            <img alt="Vue logo" src="/metamask.png" class="name" />
-          </div>
-          <div>EVM</div>
-        </a>
-      </div>
-      <div class="flex-item-right1"></div>
-    </div>
+    <b-nav>
+      <b-nav-item></b-nav-item>
+      <b-nav-item
+        ><img alt="Vue logo" src="/whiteLogo.png" width="90" height="70"
+      /></b-nav-item>
+    </b-nav>
+    <b-container class="main-div">
+      <b-row class="text-center items" align-v="center">
+        <b-col></b-col>
+        <b-col
+          ><a href="https://substrate.metarock.app">
+            <div>
+              <img
+                alt="Vue logo"
+                src="/polkadot.png"
+                class="name"
+                width="100"
+              />
+              <p class="name">Substrate</p>
+            </div>
+          </a></b-col
+        >
+        <b-col
+          ><a href="http://evm.metarock.network:3000">
+            <div>
+              <img
+                alt="Vue logo"
+                src="/metamask.png"
+                class="name"
+                width="100"
+              />
+              <p class="name">EVM</p>
+            </div>
+          </a></b-col
+        >
+        <b-col></b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -39,60 +55,30 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #fff;
-  padding-top: 30px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: row;
   font-size: 30px;
-  text-align: center;
-  padding-top: 150px;
 }
 
-
-.flex-item-left1 {
-  background-color: transparent;
-  flex: 30%;
+.main-div{
+  height: 90vh !important;
 }
 
-.flex-item-left {
-  background-color: transparent;
-  padding: 10px;
-  flex: 10%;
+.name {
+  padding-top: 10px;
 }
 
-.flex-item-right {
-  background-color: transparent;
-  padding: 10px;
-  flex: 10%;
-}
-
-.flex-item-right1 {
-  background-color: transparent;
-  flex: 30%;
-}
-
-/* Responsive layout - makes a one column-layout instead of two-column layout */
-@media (max-width: 800px) {
-  .flex-container {
-    flex-direction: column;
-    padding-top: 40px;
-  }
-  .flex-item-left1 {
-    flex: 0%;
-  }
-  .flex-item-right1 {
-    flex: 0%;
-  }
+.items {
+  height: 80% !important;
 }
 
 a {
   text-decoration: none !important;
   color: white !important;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 700px) {
+  .img {
+    width: 50px;
+  }
 }
 </style>
