@@ -23,7 +23,7 @@
           </a></b-col
         >
         <b-col
-          ><a href="http://evm.metarock.network:3000">
+          ><a href="http://evm.metarock.app">
             <div>
               <img
                 alt="Vue logo"
